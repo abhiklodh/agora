@@ -11,5 +11,5 @@
 // about supported directives.
 //
 //= require rails-ujs
-
+//= require matestack-ui-core
 //= require_tree .
