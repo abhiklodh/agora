@@ -1,48 +1,60 @@
 class Components::Footer < Matestack::Ui::StaticComponent
 
+  def prepare
+    @supporters = [
+      'Verband deutscher Ärzte',
+      'Deutsche Krankenhausgesellschaft e.V.',
+      'AOK Baden-Württemberg'
+    ]
+  end
+
   def response
     components {
       footer class: 'footer fixed-bottom' do
         div class: 'row' do
           div class: 'col-md-12' do
-            plain 'Logo'
+            link path: :root_path do
+              img path: "agora_logo.png", class: 'mb-4 footer-logo'
+            end
           end
           div class: 'col-md-3' do
-            transition path: :root_path, text: 'Über uns'
+            link path: :root_path, class: 'fat-footer-link', text: 'Über uns'
             br
-            transition path: :root_path, text: 'FAQ'
+            link path: :root_path, class: 'fat-footer-link', text: 'FAQ'
             br
-            transition path: :root_path, text: 'Kontakt'
+            link path: :root_path, class: 'fat-footer-link', text: 'Kontakt'
             br
-            transition path: :root_path, text: 'in'
-            transition path: :root_path, text: 'F'
-            transition path: :root_path, text: 'IG'
-            transition path: :root_path, text: 'TW'
+            link path: :root_path, text: 'in'
+            link path: :root_path, text: 'F'
+            link path: :root_path, text: 'IG'
+            link path: :root_path, text: 'TW'
           end
           div class: 'col-md-3' do
             paragraph do
-              transition path: :root_path, text: 'Tipps'
+              link path: :root_path, class: 'thin-footer-link', text: 'Tipps für Ihre Sicherheit'
             end
             paragraph do
-              transition path: :root_path, text: 'Wichtige Kontaktdaten'
+              link path: :root_path, class: 'thin-footer-link', text: 'Wichtige Kontaktdaten'
             end
             paragraph do
-              transition path: :root_path, text: 'Datenschutzerklärung'
+              link path: :root_path, class: 'thin-footer-link', text: 'Datenschutzerklärung'
             end
             paragraph do
-              transition path: :root_path, text: 'Nutzungsbedingungen'
+              link path: :root_path, class: 'thin-footer-link', text: 'Nutzungsbedingungen'
             end
             paragraph do
-              transition path: :root_path, text: 'Impressum'
+              link path: :root_path, class: 'thin-footer-link', text: 'Impressum'
             end
           end
           div class: 'col-md-6' do
-            heading size: 3, text: 'Unterstützt von'
-            span text: 'Verband deutscher Ärzte'
-            br
-            span text: 'Deutsche Krankenhausgesellschaft e.V.'
-            br
-            span text: 'AOK Baden-Württemberg'
+            heading size: 4, class: 'bold', text: 'Unterstützt von'
+            div class: 'row' do
+              @supporters.each do |supporter|
+                div class: 'col-3' do
+                  span class: 'small-text', text: supporter
+                end
+              end
+            end
           end
         end
       end

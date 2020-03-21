@@ -1,4 +1,4 @@
-class Pages::UserApp::SignIn < Matestack::Ui::Page
+class Pages::StaticApp::SignIn < Matestack::Ui::Page
 
   def prepare
     @user = User.new
@@ -17,6 +17,8 @@ class Pages::UserApp::SignIn < Matestack::Ui::Page
             div class: 'input-wrapper mb-4' do
               form_input id: 'password', key: :password, type: :password, placeholder: 'Passwort'
             end
+            link path: :root_path, class: 'pw-reset d-block mb-3', text: 'Passwort vergessen?'
+
             form_submit do
               button class: 'blue-button', text: 'Einloggen'
             end
@@ -24,7 +26,6 @@ class Pages::UserApp::SignIn < Matestack::Ui::Page
           async show_on: "login_failed", hide_after: 5000 do
             plain t(:login_failed)
           end
-          # link path: :new_client_password_path, class: 'form-inline-link', text: t(:forgot_password)
         end
       end
 
@@ -38,7 +39,11 @@ class Pages::UserApp::SignIn < Matestack::Ui::Page
       for: @user,
       method: :post,
       path: :user_session_path,
-      success: { transition: { path: :user_dashboard_path } },
+      success: {
+        transition: {
+          follow_response: true
+        }
+      },
       failure: { emit: "login_failed" }
     }
   end

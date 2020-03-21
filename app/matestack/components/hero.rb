@@ -1,15 +1,16 @@
 class Components::Hero < Matestack::Ui::StaticComponent
 
-  def prepare
-    @user = current_user
-    @institute = Institution.find_by(user_id: @user.id)
-  end
-
   def response
     components {
-      heading do
-        strong text: "#{@institute.title}"
-        plain " (#{@user.first_name} #{@user.last_name})"
+      div class: 'pt-4 pb-5 pl-5 pr-5 row' do
+        div class: 'col-8' do
+          transition path: :root_path do
+            img path: "agora_logo.png", class: 'static-hero-logo'
+          end
+        end
+        div class: 'col-4 pr-5 pt-2 text-right' do
+          transition path: :new_user_session_path, class: 'blue-button', text: 'Einloggen'
+        end
       end
     }
   end

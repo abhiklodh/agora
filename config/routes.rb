@@ -14,6 +14,8 @@ Rails.application.routes.draw do
     resources :chats do
       post 'create_message', to: 'message#create'
     end
+    resources :items
+    get 'contacts', to: 'area#dashboard'
   end
 
 end

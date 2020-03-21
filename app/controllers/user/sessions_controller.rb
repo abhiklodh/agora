@@ -5,7 +5,7 @@ class User::SessionsController < Devise::SessionsController
 
   # GET /resource/sign_in
   def new
-    responder_for(Pages::UserApp::SignIn)
+    responder_for(Pages::StaticApp::SignIn)
   end
 
   # POST /resource/sign_in

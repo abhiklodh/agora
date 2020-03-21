@@ -2,6 +2,7 @@ class User::MessageController < User::BaseController
 
   def create
     @message = Message.new(text: params[:message][:text], chat_id: params[:chat_id], user_id: params[:user_id])
+    @message.valid?
     if @message.save
       return 200
     else

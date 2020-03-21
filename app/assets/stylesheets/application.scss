@@ -5,18 +5,27 @@
  */
 
 
+ body {
+   font-family: 'Inter', sans-serif;
+   background-color: #f9fbff;
+   color: #2f2f2f;
+ }
 
+ main {
+   min-height: 80vh;
+ }
 
-// font-family: 'Inter', sans-serif;
+ .matestack_page {
+   padding-bottom: 320px;
+ }
 
 .navigation {
-  min-height: 100vh;
-  padding-left: 20px;
+  min-height: 100%;
+  padding-left: 35px;
 }
 
-.navigation a {
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
+.fat-footer-link, .navigation a {
+  font-size: 1rem;
   font-weight: bolder;
   font-stretch: normal;
   font-style: normal;
@@ -25,9 +34,26 @@
   color: #2f2f2f;
 }
 
+.thin-footer-link {
+  font-size: 14px;
+  color: #2f2f2f;
+}
 
-body {
-  background-color: #f9fbff;
+.nav-active {
+  color: #004bff !important;
+}
+
+.user-icon {
+  vertical-align: bottom;
+  height: 2rem;
+  width: auto;
+  margin-right: 2rem;
+}
+
+#new_message {
+  width: 100%;
+  box-shadow: 0 0 0 0 #fff;
+  border-radius: 0 !important;
 }
 
 .shadowed-bg-white {
@@ -35,25 +61,81 @@ body {
   box-shadow: 0 0 5px 0 rgba(225, 225, 225, 0.5);
 }
 
+.message-preview {
+  padding: 20px;
+}
+
+.static-hero-logo {
+  height: 2rem;
+  width: auto;
+}
+
+.circle {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  text-align: center;
+  display: inline-block;
+  padding-top: 5px;
+}
+
 footer {
   background-color: #c7d7f6;
+  padding: 60px 80px;
+}
+
+.footer-logo {
+  width: 180px;
+  height: auto;
+}
+
+.small-text {
+  font-size: 11px;
 }
 
 h1 {
-  font-family: 'Inter', sans-serif;
-  font-size: 25.1px;
+  font-size: 1.7rem;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: #2f2f2f;
+}
+h2 {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+h3 {
+  font-size: 1.2rem;
 }
 
-h5 {
-  font-family: 'Inter', sans-serif;
-  font-size: 1.1rem;
-  color: #2f2f2f;
+h4 {
+  font-size: 14px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.logo {
+  width: 55%;
+  height: auto;
+}
+
+.message  {
+  border-radius: 4px;
+  padding: 1em;
+  margin: 1em 0;
+  width: 47%;
+}
+.own-message {
+  background-color: #f0f4fd;
+  float: right;
+}
+
+.their-message {
+  background-color: #c7d7f6;
+  float: left;
 }
 
 input {
@@ -64,15 +146,26 @@ input {
   padding: 10px;
 }
 
+.pw-reset {
+  font-size: 11px;
+  color: #868686;
+  text-decoration: underline;
+}
+
 .chat-window {
   padding: 20px;
+  width: 80%;
+}
+
+.message-sender {
+  font-size: 11px;
+  color: #868686;
 }
 
 .blue-button {
   border-radius: 2px;
   background-color: #0044e9;
   border: 0.1px solid #0044e9;
-  font-family: 'Inter', sans-serif;
   font-size: 16px;
   font-weight: bold;
   text-align: center;
