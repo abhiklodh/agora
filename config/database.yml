@@ -2,8 +2,6 @@ efault: &default
   adapter: postgresql
   encoding: unicode
   host: postgres
-  username: <%= ENV.fetch("POSTGRES_USER") { "postgres" } %>
-  password: <%= ENV.fetch("POSTGRES_PASSWORD") { "postgres" } %>
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 test:
@@ -12,6 +10,8 @@ test:
 
 development:
   <<: *default
+  username: <%= ENV.fetch("POSTGRES_USER") { "postgres" } %>
+  password: <%= ENV.fetch("POSTGRES_PASSWORD") { "postgres" } %>
   database: development
 
 staging:
@@ -20,4 +20,6 @@ staging:
 
 production:
   <<: *default
-  database: production
+  database: agora_production
+  username: agora
+  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
