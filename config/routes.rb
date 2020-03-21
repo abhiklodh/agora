@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  root 'application#welcome'
+  root 'static#welcome'
 
-  devise_for :users, controllers: {
-    sessions: 'custom_devise/sessions',
+  devise_for :users, path: 'user', controllers: {
+    sessions: 'user/sessions',
     registrations: 'custom_devise/registrations',
     passwords: 'custom_devise/passwords'
   }
@@ -10,8 +10,9 @@ Rails.application.routes.draw do
   namespace :user do
     get 'dashboard', to: 'area#dashboard'
     get 'show_profile', to: 'profile#display'
-    namespace :chat do
-      get 'index', to: 'index'
+    put 'update_profile', to: 'profile#update'
+    resources :chats do
+      post 'create_message', to: 'message#create'
     end
   end
 

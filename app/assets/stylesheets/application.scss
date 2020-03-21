@@ -9,22 +9,80 @@
 
 // font-family: 'Inter', sans-serif;
 
+.navigation {
+  min-height: 100vh;
+  padding-left: 20px;
+}
+
+.navigation a {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: bolder;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2rem;
+  letter-spacing: normal;
+  color: #2f2f2f;
+}
 
 
 body {
   background-color: #f9fbff;
 }
 
-.bg-white {
+.shadowed-bg-white {
   background-color: #fff;
+  box-shadow: 0 0 5px 0 rgba(225, 225, 225, 0.5);
 }
 
 footer {
   background-color: #c7d7f6;
 }
 
+h1 {
+  font-family: 'Inter', sans-serif;
+  font-size: 25.1px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #2f2f2f;
+}
+
 h5 {
-  font-family: 'Inter';
+  font-family: 'Inter', sans-serif;
   font-size: 1.1rem;
   color: #2f2f2f;
+}
+
+input {
+  border-radius: 4px;
+  border: 0;
+  box-shadow: 0 0 5px 0 rgba(225, 225, 225, 0.5);
+  background-color: #ffffff;
+  padding: 10px;
+}
+
+.chat-window {
+  padding: 20px;
+}
+
+.blue-button {
+  border-radius: 2px;
+  background-color: #0044e9;
+  border: 0.1px solid #0044e9;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+  padding: 7px 25px;
+}
+
+.blue-button:hover {
+  background-color: #fff;
+  color: #0044e9;
+  border: 0.1px solid #0044e9;
+  text-decoration: none;
 }

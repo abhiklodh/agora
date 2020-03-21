@@ -67,8 +67,6 @@ item_four = Item.create(
 chat_one = Chat.create(
   sender_id: user_one.id,
   recipient_id: user_two.id
-  # ,
-  # items: [item_one.id, item_two.id, item_three.id]
 )
 
 message_one = Message.create(

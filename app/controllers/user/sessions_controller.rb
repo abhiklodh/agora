@@ -1,11 +1,12 @@
 # frozen_string_literal: true
 
-class CustomDevise::SessionsController < Devise::SessionsController
+class User::SessionsController < Devise::SessionsController
+  include Matestack::Ui::Core::ApplicationHelper
 
   # GET /resource/sign_in
-  # def new
-  #   super
-  # end
+  def new
+    responder_for(Pages::UserApp::SignIn)
+  end
 
   # POST /resource/sign_in
   # def create
