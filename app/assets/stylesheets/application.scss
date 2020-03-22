@@ -200,6 +200,25 @@ input {
   text-decoration: underline;
 }
 
+.items {
+  font-size: 13px;
+  color: #2f2f2f;
+}
+
+.new_message_checkboxes #some_id {
+  display: inline-block;
+  width: 49%;
+  input {
+    display: inline;
+    width: 10%;
+    background-color: #ffffff;
+  }
+  label {
+    padding-left: 5px;
+    display: inline;
+  }
+}
+
 .chat-window {
   padding: 20px;
   width: 80%;
@@ -211,7 +230,7 @@ input {
 }
 
 .blue-button {
-  border-radius: 2px;
+  border-radius: 5px;
   background-color: #0044e9;
   border: 0.1px solid #0044e9;
   font-size: 16px;

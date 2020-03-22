@@ -96,6 +96,19 @@ class Pages::UserApp::Dashboard < Matestack::Ui::Page
 
       div class: 'row' do
         div class: 'col-8' do
+          span class: 'tiny ml-3 mr-3 d-inline-block' do
+            span class: "status-circle status-open"
+            plain " Ungelöst"
+          end
+          span class: 'tiny mr-3 d-inline-block' do
+            span class: "status-circle status-requested"
+            plain " In Bearbeitung"
+          end
+          span class: 'tiny mb-3 mr-3 d-inline-block' do
+            span class: "status-circle status-closed"
+            plain " Gelöst"
+          end
+
           async show_on: "show_offers_success", hide_on: "show_requests_success", init_show: true do
             # partial :offers_filter
             async rerender_on: "open-offer-collection-update" do
@@ -145,7 +158,7 @@ class Pages::UserApp::Dashboard < Matestack::Ui::Page
     partial {
       collection_content @my_open_offers.config do
         @my_open_offers.data.each do |offer|
-          div class: 'mt-2 mb-2 pt-3 pb-3 pr-3 pl-3 shadowed-bg-white' do
+          div class: 'mt-3 mb-3 pt-3 pb-3 pr-3 pl-3 shadowed-bg-white' do
             div class: 'row' do
               div class: 'col-3' do
                 strong text: offer[:name]
@@ -156,7 +169,7 @@ class Pages::UserApp::Dashboard < Matestack::Ui::Page
                 br
                 span class: 'tiny', text: "#{offer[:location]}"
               end
-              div class: 'col-7' do
+              div class: 'col-7 mt-2' do
                 offer[:items].each do |item|
                   span class: 'tiny mr-3 d-inline-block' do
                     span class: "status-circle #{'status-open' if item[:state] == 'open'} #{'status-requested' if item[:state] == 'requested'} #{'status-closed' if item[:state] == 'closed'}"
@@ -165,8 +178,8 @@ class Pages::UserApp::Dashboard < Matestack::Ui::Page
                 end
               end
               div class: 'col-2' do
-                link path: :user_dashboard_path, class: 'mt-2 mb-2 rounded-blue-button', text: 'Kontaktieren'
-                link path: :user_dashboard_path, class: 'rounded-dark-button', text: 'Details'
+                transition path: :new_user_chat_path, class: 'mt-2 mb-2 rounded-blue-button', text: 'Kontaktieren'
+                transition path: :user_items_show_path, class: 'rounded-dark-button', text: 'Details'
               end
             end
           end
@@ -179,7 +192,7 @@ class Pages::UserApp::Dashboard < Matestack::Ui::Page
     partial {
       collection_content @my_open_requests.config do
         @my_open_requests.data.each do |request|
-          div class: 'mt-2 mb-2 pt-3 pb-3 pr-3 pl-3 shadowed-bg-white' do
+          div class: 'mt-3 mb-3 pt-3 pb-3 pr-3 pl-3 shadowed-bg-white' do
             div class: 'row' do
               div class: 'col-3' do
                 strong text: request[:name]
@@ -190,7 +203,7 @@ class Pages::UserApp::Dashboard < Matestack::Ui::Page
                 br
                 span class: 'tiny', text: "#{request[:location]}"
               end
-              div class: 'col-7' do
+              div class: 'col-7 mt-2' do
                 request[:items].each do |item|
                   span class: 'tiny mr-3 d-inline-block' do
                     span class: "status-circle #{'status-open' if item[:state] == 'open'} #{'status-requested' if item[:state] == 'requested'} #{'status-closed' if item[:state] == 'closed'}"
@@ -199,8 +212,8 @@ class Pages::UserApp::Dashboard < Matestack::Ui::Page
                 end
               end
               div class: 'col-2' do
-                link path: :user_dashboard_path, class: 'mt-2 mb-2 rounded-blue-button', text: 'Kontaktieren'
-                link path: :user_dashboard_path, class: 'rounded-dark-button', text: 'Details'
+                transition path: :new_user_chat_path, class: 'mt-2 mb-2 rounded-blue-button', text: 'Kontaktieren'
+                transition path: :user_items_show_path, class: 'rounded-dark-button', text: 'Details'
               end
             end
           end

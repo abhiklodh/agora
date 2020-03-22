@@ -17,6 +17,7 @@ Rails.application.routes.draw do
     resources :items
     get 'contacts', to: 'area#dashboard'
     post 'dashboard_switch', to: 'area#switch'
+    get 'items_show', to: 'items#show'
   end
 
   get '/404', to: 'errors#not_found'
