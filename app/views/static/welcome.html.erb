@@ -1,19 +1,86 @@
-
-<%= render "shared/menu" %>
-<div class="container">
-  <div class="row mt-5 pt-5">
-    <div class="col-md-6">
-      <h1 class="big-header">Matching where it's needed most</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-        voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-      </p>
+<section class="pb-5 bg-whitegrey snake">
+  <div class="pt-4 pb-5 pl-5 pr-5 row">
+    <div class="col-8">
+      <a href="/" class="">
+         <%= link_to(image_tag("agora_logo.png", alt: "agora logo", class: "static-hero-logo"), root_path) %>
+      </a>
+    </div>
+    <div class="col-4 pr-5 pt-2 text-right">
       <%= link_to "Einloggen", user_session_path, class: "blue-button" %>
     </div>
-    <div class="col-md-6">
-      Bild folgt
+  </div>
+  <div class="pb-5 pt-5 mb-5 container-fluid pl-5">
+    <div class="row pl-3 mt-5 pt-5">
+      <div class="col-md-4">
+        <h1 class="big-header">Digitale Plattform <br>für medizinische Ressourcen</h1>
+        <p>
+          Diese SAS-Platform digitalisiert den Marktplatz <br/>für medizinische Versorgungsgüter
+          um Mangel <br/>in Krisenzeiten zu reduzieren.
+        </p>
+        <%= link_to "Kostenlos testen", user_session_path, class: "blue-button" %>
+      </div>
+      <div class="col-md-8">
+        <%= image_tag("landing/marktplatz.png", alt: "agora dashboard", class: "landing-dashboard") %>
+      </div>
     </div>
   </div>
-</div>
+</section>
+<section class="mb-5 mt-5">
+  <div class="pb-5 pt-5 container">
+    <div class="row mt-5 pt-5">
+      <div class="col-md-8 bg-whitegrey p-5">
+        <h2 class="big-header">Inserate <br>digital erstellen</h2>
+        <p class="pr-5">
+          Mit der smarten Artikelsuche ganz einfach <br>alle benötigten Posten eintragen <br>und veröffentlichen.
+        </p>
+        <%= link_to "Jetzt registrieren", user_session_path, class: "float-right blue-button-inverse" %>
+        <%= image_tag("landing/inserat.png", alt: "agora dashboard", class: "landing-img-left") %>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="mb-5 mt-5 pt-5">
+  <div class="pb-5 container">
+    <div class="row mt-5">
+      <div class="col-md-8 offset-md-4 bg-whitegrey p-5 text-right">
+        <h2 class="big-header">Matching mit dem <br/>richtigen Anbieter</h2>
+        <p class="">
+          In der Datenbank befinden sich <br/>Krankenhäuser, Arztpraxen, die <br/>Bundeswehr, Hersteller und Lieferanten.
+        </p>
+        <%= link_to "Partnerliste einsehen", user_session_path, class: "float-left blue-button-inverse" %>
+        <%= image_tag("landing/matches.png", alt: "agora dashboard", class: "landing-img-right") %>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="mt-5 mb-5 pt-5">
+  <div class="pb-5 mb-5 container">
+    <div class="row mt-5 pt-5">
+      <div class="col-md-8 bg-whitegrey p-5">
+        <h2 class="big-header">API Anbindung von <br/>Datenbanken</h2>
+        <p class="pr-5">
+          Durch API Schnittstellen werden <br/>Artikelbezeichnungen und Ihre <br/>Verfügbarkeit bereitgestellt.
+        </p>
+        <%= link_to "Mehr erfahren", user_session_path, class: "blue-button-inverse" %>
+        <%= image_tag("landing/bundeswehr.png", alt: "agora dashboard", class: "landing-img-left-two") %>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="mb-5">
+  <div class="pb-5 mb-5 container">
+    <div class="row mt-5 pt-5">
+      <div class="col-md-12 text-center">
+        <h2 class="big-header">Early Access und <br/>COVID-19 stoppen!</h2>
+        <p class="pr-5 mb-5">
+          Schreiben Sie uns eine Email wenn Sie mit Ihrer <br/>
+          Institution an unserer Pilotphase teilnehmen wollen.
+        </p>
+          <a href="mailto:w@w11.network" class="blue-button mb-4 mr-3">Anfrage</a>
+          <a href="https://invis.io/2QWIMV465VH#/410290796_agora_Prototype_desktop_Login" target="_blank" class="blue-button-inverse">Prototyp testen</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <%= render "shared/footer" %>

@@ -6,9 +6,46 @@
 
  body {
    font-family: 'Inter', sans-serif;
-   background-color: #f9fbff;
+   background-color: #fff;
    color: #2f2f2f;
  }
+
+.snake {
+  background-image: url(asset-path('agora_background.svg'));
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.landing-dashboard {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: -140px;
+}
+
+.landing-img-left {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  bottom: 80px;
+  left: 400px;
+}
+
+.landing-img-right {
+  width: 80%;
+  height: auto;
+  position: absolute;
+  bottom: 100px;
+  left: -400px;
+}
+
+.landing-img-left-two {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  bottom: 80px;
+  left: 470px;
+}
 
 .big-header {
   font-size: 3rem;
@@ -20,6 +57,7 @@
 
  main {
    min-height: 65vh !important;
+   background-color: #f9fbff;
  }
 
  .matestack_page {
@@ -194,6 +232,14 @@ input {
   padding: 10px;
 }
 
+.bg-white {
+  background-color: #fff;
+}
+
+.bg-whitegrey {
+  background-color: #f9fbff;
+}
+
 .pw-reset {
   font-size: 11px;
   color: #868686;
@@ -229,6 +275,10 @@ input {
   color: #868686;
 }
 
+section {
+  width: 100%;
+}
+
 .blue-button {
   border-radius: 5px;
   background-color: #0044e9;
@@ -237,6 +287,23 @@ input {
   font-weight: bold;
   text-align: center;
   color: #ffffff;
+  padding: 7px 25px;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.blue-button-inverse {
+  border-radius: 5px;
+  background-color: #fff;
+  border: 0.1px solid #0044e9;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: #0044e9;
   padding: 7px 25px;
 }
 

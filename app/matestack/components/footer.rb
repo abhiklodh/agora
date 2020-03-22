@@ -18,16 +18,24 @@ class Components::Footer < Matestack::Ui::StaticComponent
             end
           end
           div class: 'col-md-3' do
-            link path: :user_dashboard_path, class: 'fat-footer-link', text: 'Über uns'
+            transition path: :user_dashboard_path, class: 'fat-footer-link', text: 'Über uns'
             br
-            link path: :user_dashboard_path, class: 'fat-footer-link', text: 'FAQ'
+            transition path: :user_dashboard_path, class: 'fat-footer-link', text: 'FAQ'
             br
-            link path: :user_dashboard_path, class: 'fat-footer-link', text: 'Kontakt'
+            transition path: :user_dashboard_path, class: 'fat-footer-link', text: 'Kontakt'
             br
-            link path: :user_dashboard_path, text: 'in'
-            link path: :user_dashboard_path, text: 'F'
-            link path: :user_dashboard_path, text: 'IG'
-            link path: :user_dashboard_path, text: 'TW'
+            transition path: :user_dashboard_path do
+              img path: 'logos/linkedin.svg', class: 'social-icons'
+            end
+            transition path: :user_dashboard_path do
+              img path: 'logos/facebook.svg', class: 'social-icons'
+            end
+            transition path: :user_dashboard_path do
+              img path: 'logos/instagram.svg', class: 'social-icons'
+            end
+            transition path: :user_dashboard_path do
+              img path: 'logos/twitter.svg', class: 'social-icons'
+            end
           end
           div class: 'col-md-3' do
             paragraph do

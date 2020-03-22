@@ -85,17 +85,17 @@ class Pages::UserApp::Dashboard < Matestack::Ui::Page
   def response
     components {
       heading size: 2, class: 'mt-3 mb-4' do
-        action show_offers_config do
-          plain 'Angebote'
-        end
-        span class: 'pr-4'
         action show_requests_config do
           plain 'Gesuche'
+        end
+        span class: 'pr-4'
+        action show_offers_config do
+          plain 'Angebote'
         end
       end
 
       div class: 'row' do
-        div class: 'col-8' do
+        div class: 'col-8 col-xl-12' do
           span class: 'tiny ml-3 mr-3 d-inline-block' do
             span class: "status-circle status-open"
             plain " Ungelöst"
@@ -109,14 +109,14 @@ class Pages::UserApp::Dashboard < Matestack::Ui::Page
             plain " Gelöst"
           end
 
-          async show_on: "show_offers_success", hide_on: "show_requests_success", init_show: true do
+          async show_on: "show_offers_success", hide_on: "show_requests_success", init_show: false do
             # partial :offers_filter
             async rerender_on: "open-offer-collection-update" do
               partial :offer_content
             end
           end
 
-          async show_on: "show_requests_success", hide_on: "show_offers_success", init_show: false do
+          async show_on: "show_requests_success", hide_on: "show_offers_success", init_show: true do
             # partial :requests_filter
             async rerender_on: "open-request-collection-update" do
               partial :request_content

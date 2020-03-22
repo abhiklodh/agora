@@ -1,3 +1,40 @@
-<footer class="footer fixed-bottom text-center">
-  <p>Im Rahmen des <a href="https://wirvsvirushackathon.org/">WirVsVirus Hackathon</a> von <a href="https://w11.network">W11 Network</a> und <a href="https://matestack.io">Matestack</a> erstellt.</p>
+<footer class="footer ">
+  <div class="row">
+    <div class="col-md-12">
+      <%= link_to(image_tag("agora_logo.png", alt: "agora logo", class: "mb-4 footer-logo"), root_path) %>
+    </div>
+    <div class="col-md-3">
+      <a href="#" class="fat-footer-link">Über uns</a>
+      <br>
+      <a href="#" class="fat-footer-link">FAQ</a>
+      <br>
+      <a href="#" class="fat-footer-link">Kontakt</a>
+      <br>
+      <%= link_to(image_tag("logos/linkedin.svg", alt: "linkedin logo", class: 'social-icon'), root_path) %>
+      <%= link_to(image_tag("logos/facebook.svg", alt: "facebook logo", class: 'social-icon'), root_path) %>
+      <%= link_to(image_tag("logos/instagram.svg", alt: "instagram logo", class: 'social-icon'), root_path) %>
+      <%= link_to(image_tag("logos/twitter.svg", alt: "twitter logo", class: 'social-icon'), root_path) %>
+    </div>
+    <div class="col-md-3">
+      <p><a href="#" class="thin-footer-link">Tipps für Ihre Sicherheit</a></p>
+      <p><a href="#" class="thin-footer-link">Wichtige Kontaktdaten</a></p>
+      <p><a href="#" class="thin-footer-link">Datenschutzerklärung</a></p>
+      <p><a href="#" class="thin-footer-link">Nutzungsbedingungen</a></p>
+      <p><a href="#" class="thin-footer-link">Impressum</a></p>
+    </div>
+    <div class="col-md-6">
+      <h4 class="bold">Unterstützt von</h4>
+      <div class="row">
+        <div class="col-3">
+          <span class="small-text">Verband deutscher Ärzte</span>
+        </div>
+        <div class="col-3">
+          <span class="small-text">Deutsche Krankenhausgesellschaft e.V.</span>
+        </div>
+        <div class="col-3">
+          <span class="small-text">AOK Baden-Württemberg</span>
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>
