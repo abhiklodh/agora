@@ -1,7 +1,7 @@
 class Components::User::Hero < Matestack::Ui::StaticComponent
 
   def prepare
-    @user = current_user
+    @user = User.first
     @institute = Institution.find_by(user_id: @user.id)
   end
 

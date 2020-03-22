@@ -1,0 +1,34 @@
+<%= render "shared/menu" %>
+<main class="container-fluid">
+  <div class="row text-center">
+    <div class="col-md-12">
+      <div class="matestack_page">
+        <div>
+          <div class="matestack_page_content">
+            <div class="row">
+              <div class="col-md-6 offset-md-3 text-center">
+                <h1 class="mt-4 mb-4">Login</h1>
+                <form>
+                  <div class="input-wrapper mb-2">
+                    <input id="email" init-value="" placeholder="martinahuber@web.de" type="text" style="">
+                  </div>
+                  <div class="input-wrapper mb-4">
+                    <input id="password" placeholder="******************" type="password" style="" autocomplete="off">
+                  </div>
+                  <a href="#" class="pw-reset d-block mb-3">Passwort vergessen?</a>
+                  <span>
+                    <%= link_to "Einloggen", user_dashboard_path, class: 'blue-button' %>
+                  </span>
+                </form>
+                <div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<%= render "shared/footer" %>
