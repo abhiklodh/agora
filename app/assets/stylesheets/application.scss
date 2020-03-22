@@ -4,7 +4,6 @@
  *= require matestack-ui-core
  */
 
-
  body {
    font-family: 'Inter', sans-serif;
    background-color: #f9fbff;
@@ -15,16 +14,21 @@
   font-size: 3rem;
 }
 
+.menu-header {
+  font-size: 1.1rem;
+}
+
  main {
-   min-height: 80vh;
+   min-height: 65vh !important;
  }
 
  .matestack_page {
-   padding-bottom: 320px;
+   padding-bottom: 60px;
  }
 
 .navigation {
-  min-height: 100%;
+  min-height: 65vh;
+  height: 100%;
   padding-left: 35px;
 }
 

@@ -2,7 +2,7 @@ class Pages::UserApp::Chats::Index < Matestack::Ui::Page
   include Matestack::Ui::Core::Collection::Helper
 
   def prepare
-    @user = current_user
+    @user = User.first
     @requests = Chat.where(recipient_id: @user.id)
     @offers = Chat.where(sender_id: @user.id)
 

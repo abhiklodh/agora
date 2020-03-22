@@ -18,14 +18,14 @@ class Components::Navbar < Matestack::Ui::StaticComponent
           img path: "agora_logo.png", class: 'mb-5 mt-2 logo'
         end
 
-        heading size: 4, class: 'mb-4', text: 'Menü'
+        heading size: 4, class: 'menu-header mb-4', text: 'Menü'
 
         @nav_items.each do |path, text|
           transition path: path,  text: text, class: "#{'nav-active' if text == 'Marktplatz'}"
           br
         end
 
-        link_to "Logout", destroy_user_session_path, method: :delete
+        # link_to "Logout", destroy_user_session_path, method: :delete
       end
     }
   end

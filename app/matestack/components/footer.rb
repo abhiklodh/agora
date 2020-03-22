@@ -10,40 +10,40 @@ class Components::Footer < Matestack::Ui::StaticComponent
 
   def response
     components {
-      footer class: 'footer fixed-bottom' do
+      footer class: 'footer ' do
         div class: 'row' do
           div class: 'col-md-12' do
-            link path: :root_path do
+            link path: :user_dashboard_path do
               img path: "agora_logo.png", class: 'mb-4 footer-logo'
             end
           end
           div class: 'col-md-3' do
-            link path: :root_path, class: 'fat-footer-link', text: 'Über uns'
+            link path: :user_dashboard_path, class: 'fat-footer-link', text: 'Über uns'
             br
-            link path: :root_path, class: 'fat-footer-link', text: 'FAQ'
+            link path: :user_dashboard_path, class: 'fat-footer-link', text: 'FAQ'
             br
-            link path: :root_path, class: 'fat-footer-link', text: 'Kontakt'
+            link path: :user_dashboard_path, class: 'fat-footer-link', text: 'Kontakt'
             br
-            link path: :root_path, text: 'in'
-            link path: :root_path, text: 'F'
-            link path: :root_path, text: 'IG'
-            link path: :root_path, text: 'TW'
+            link path: :user_dashboard_path, text: 'in'
+            link path: :user_dashboard_path, text: 'F'
+            link path: :user_dashboard_path, text: 'IG'
+            link path: :user_dashboard_path, text: 'TW'
           end
           div class: 'col-md-3' do
             paragraph do
-              link path: :root_path, class: 'thin-footer-link', text: 'Tipps für Ihre Sicherheit'
+              link path: :user_dashboard_path, class: 'thin-footer-link', text: 'Tipps für Ihre Sicherheit'
             end
             paragraph do
-              link path: :root_path, class: 'thin-footer-link', text: 'Wichtige Kontaktdaten'
+              link path: :user_dashboard_path, class: 'thin-footer-link', text: 'Wichtige Kontaktdaten'
             end
             paragraph do
-              link path: :root_path, class: 'thin-footer-link', text: 'Datenschutzerklärung'
+              link path: :user_dashboard_path, class: 'thin-footer-link', text: 'Datenschutzerklärung'
             end
             paragraph do
-              link path: :root_path, class: 'thin-footer-link', text: 'Nutzungsbedingungen'
+              link path: :user_dashboard_path, class: 'thin-footer-link', text: 'Nutzungsbedingungen'
             end
             paragraph do
-              link path: :root_path, class: 'thin-footer-link', text: 'Impressum'
+              link path: :user_dashboard_path, class: 'thin-footer-link', text: 'Impressum'
             end
           end
           div class: 'col-md-6' do

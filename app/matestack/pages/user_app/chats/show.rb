@@ -1,7 +1,7 @@
 class Pages::UserApp::Chats::Show < Matestack::Ui::Page
 
   def prepare
-    @user = current_user
+    @user = User.first
     @chat = Chat.find_by(id: params[:id])
     if @user.id == @chat.recipient.id
       @partner = User.find_by(id: @chat.sender_id)
@@ -45,7 +45,7 @@ class Pages::UserApp::Chats::Show < Matestack::Ui::Page
         end
         div class: 'mt-3 mb-5 pb-5 chat-window text-right' do
           form_submit do
-            button class: 'blue-button', text: 'Senden'
+            button class: 'blue-button', text: 'Senden', disabled: true
           end
         end
       end

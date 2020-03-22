@@ -14,7 +14,7 @@ class Components::User::Hero < Matestack::Ui::StaticComponent
           heading size: 3, class: 'd-inline', text: " (#{@user.first_name} #{@user.last_name})"
         end
         div class: 'col-4 pt-2' do
-          transition path: :root_path, class: 'blue-button', text: 'Inserat erstellen'
+          transition path: :user_dashboard_path, class: 'blue-button', text: 'Inserat erstellen'
           link path: :user_chats_path do
             img path: "icons/message.svg", class: 'ml-3'
           end

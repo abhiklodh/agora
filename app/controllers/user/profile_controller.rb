@@ -5,7 +5,7 @@ class User::ProfileController < User::BaseController
   end
 
   def update
-    user = current_user
+    user = User.first
     user.update_attributes user_params
 
     if has_errors?
@@ -25,7 +25,7 @@ class User::ProfileController < User::BaseController
   protected
 
   def has_errors?
-    user = current_user
+    user = User.first
 
     user.valid? #trigger validations
 
