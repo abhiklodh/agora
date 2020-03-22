@@ -2,8 +2,6 @@ class Pages::UserApp::Profile < Matestack::Ui::Page
 
   def prepare
     @current_user = User.first
-    p @current_user
-
     @links = {
       request.path => "Mein Profil"
     }
@@ -14,7 +12,6 @@ class Pages::UserApp::Profile < Matestack::Ui::Page
       custom_breadcrumb links: @links
 
       heading size: 2, class: 'mt-3 mb-4', text: 'Mein Account'
-
 
       heading size: 3, class: 'mt-2 mb-3', text: 'Persönliche Daten'
 

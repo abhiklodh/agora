@@ -64,9 +64,49 @@
   border-radius: 0 !important;
 }
 
+.status-circle {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.status-open {
+  background-color: #ff4f58;
+}
+
+.status-requested {
+  background-color: #ffc511;
+}
+
+.status-closed {
+  background-color: #8fff69;
+}
+
 .shadowed-bg-white {
   background-color: #fff;
   box-shadow: 0 0 5px 0 rgba(225, 225, 225, 0.5);
+}
+
+.rounded-blue-button {
+  text-align: center;
+  display: block;
+  padding: 6px 10px;
+  color: #0044e9;
+  border-radius: 4px;
+  border: solid 1px #004bff;
+}
+.rounded-dark-button {
+  text-align: center;
+  display: block;
+  padding: 6px 10px;
+  color: #333333;
+  border-radius: 4px;
+  border: solid 1px #333333;
+}
+
+.tiny {
+  font-size: 12px;
 }
 
 .message-preview {

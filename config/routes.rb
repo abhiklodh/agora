@@ -16,10 +16,12 @@ Rails.application.routes.draw do
     end
     resources :items
     get 'contacts', to: 'area#dashboard'
+    post 'dashboard_switch', to: 'area#switch'
   end
 
   get '/404', to: 'errors#not_found'
   get '/422', to: 'errors#unacceptable'
   get '/500', to: 'errors#internal_error'
+
 
 end
